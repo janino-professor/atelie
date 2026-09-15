@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliê Gótico - Apresentação do Projeto Web</title>
+    <style>
+        :root {
+            --bg-color: #0a050d;
+            --card-bg: #140a1d;
+            --accent-purple: #4a154b;
+            --bright-purple: #8b008b;
+            --neon-purple: #9d4edd;
+            --text-color: #e0d6e8;
+            --text-muted: #a392b2;
+            --border-color: #2e103f;
+            --gold-accent: #c5a059;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(180deg, #180022 0%, var(--bg-color) 100%);
+            border-bottom: 2px solid var(--border-color);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--neon-purple);
+            font-size: 2.8rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(157, 78, 221, 0.4);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background-color: var(--accent-purple);
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 1px solid var(--bright-purple);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background-color: var(--bright-purple);
+            box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: var(--neon-purple);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--accent-purple);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--bright-purple);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--neon-purple);
+        }
+
+        .btn-ml {
+            background-color: #2d1b4e;
+            border: 1px solid #c5a059;
+            color: #c5a059;
+        }
+
+        .btn-shopee {
+            background-color: #3b092b;
+            border: 1px solid #ff4500;
+            color: #ff7f50;
+        }
+
+        .mockup-form {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="Projeto Website Atelie Gotico - Apresentacao de Modelagem.pdf" class="badge" download>Download Proposta de Projeto Web 📥</a>
+        <h1>Ateliê Gótico</h1>
+        <p>Apresentação de Modelagem, Arquitetura e Fluxo Funcional da Plataforma Digital</p>
+    </header>
+
+    <div class="container">
+
+        <!-- VISÃO GERAL -->
+        <section>
+            <h2>1. Visão Geral do Projeto</h2>
+            <p>O novo website do <strong>Ateliê Gótico</strong> foi planejado para ser a vitrine digital oficial da marca, unindo o ecossistema de vendas online em marketplaces, a divulgação dos cursos presenciais/online com matrícula simplificada, e a apresentação da rotina criativa do ateliê.</p>
+            <ul>
+                <li><strong>Estética Visual:</strong> Identidade gótica consolidada (tons de roxo escuro, preto, detalhes refinados e atmosfera artesanal).</li>
+                <li><strong>Hospedagem & Infraestrutura:</strong> GitHub Pages (custo zero de servidor, alta performance e certificado SSL incluso) com Domínio Personalizado Pago.</li>
+                <li><strong>Modelo de Negócio:</strong> Vitrine interativa com redirecionamento para anúncios oficiais (Mercado Livre e Shopee) e captação de alunas via formulário gratuito.</li>
+            </ul>
+        </section>
+
+        <!-- ARQUITETURA DE PÁGINAS -->
+        <section>
+            <h2>2. Estrutura de Páginas do Site</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seção</th>
+                        <th>Objetivo Principal</th>
+                        <th>Recursos Principais</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Home</strong></td>
+                        <td>Impacto visual e navegação rápida</td>
+                        <td>Banner gótico, resumo institucional, atalhos para loja e aulas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Catálogo</strong></td>
+                        <td>Vitrine de peças e vestidos artesanais</td>
+                        <td>Galeria em alta resolução e botões de checkout externo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aulas de Costura</strong></td>
+                        <td>Captação e matrícula de alunas</td>
+                        <td>Grade curricular, horários e formulário de inscrição direta.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ateliê / Rotina</strong></td>
+                        <td>Engajamento e bastidores</td>
+                        <td>Feed visual das criações diárias e bastidores de confecção.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contato</strong></td>
+                        <td>Atendimento ao cliente</td>
+                        <td>Link direto para WhatsApp e redes sociais oficiais.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- FLUXO DE VENDAS E MATRÍCULA -->
+        <div class="grid-2">
+            <section>
+                <h2>3. Fluxo de Vendas</h2>
+                <p>O site funcionará como um <em>Hub de Redirecionamento</em> seguro para garantir facilidade logística:</p>
+                <div style="margin-top: 20px; text-align: center;">
+                    <p><em>Exemplo de botões na página do produto:</em></p>
+                    <a href="#" class="btn btn-ml" style="display: block; margin-bottom: 10px;">Comprar no Mercado Livre</a>
+                    <a href="#" class="btn btn-shopee" style="display: block; margin-bottom: 10px;">Comprar na Shopee</a>
+                    <a href="#" class="btn" style="display: block; background-color: #25d366; color: #fff;">Encomendar via WhatsApp</a>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Matrícula Online Gratuita</h2>
+                <p>Integração de formulário estático via <strong>FormSubmit / Formspree</strong> (sem custo de backend):</p>
+                <div class="mockup-form">
+                    <div class="form-group">
+                        <label>Nome da Aluna:</label>
+                        <input type="text" placeholder="Ex: Morgana Le Fay" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Turno de Interesse:</label>
+                        <select disabled>
+                            <option>Sábado - Manhã</option>
+                        </select>
+                    </div>
+                    <button class="btn" style="width: 100%;" disabled>Enviar Matrícula (Direto para o E-mail)</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- ESPECIFICAÇÕES TÉCNICAS -->
+        <section>
+            <h2>5. Especificações Técnicas</h2>
+            <ul>
+                <li><strong>Servidor:</strong> GitHub Pages (Arquivos estáticos HTML5/CSS3/JavaScript).</li>
+                <li><strong>Domínio:</strong> Personalizado (.com.br ou .com).</li>
+                <li><strong>Formulários:</strong> Integração via WebHooks/E-mail gratuitos sem necessidade de banco de dados.</li>
+                <li><strong>Responsividade:</strong> Design otimizado para celulares, tablets e computadores.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Apresentação de Modelagem do Projeto — Website Ateliê Gótico</p>
+    </footer>
+
+</body>
+</html>
