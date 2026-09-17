@@ -3,314 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ateliê Gótico - Apresentação do Projeto Web</title>
-    <style>
-        :root {
-            --bg-color: #0a050d;
-            --card-bg: #140a1d;
-            --accent-purple: #4a154b;
-            --bright-purple: #8b008b;
-            --neon-purple: #9d4edd;
-            --text-color: #e0d6e8;
-            --text-muted: #a392b2;
-            --border-color: #2e103f;
-            --gold-accent: #c5a059;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(180deg, #180022 0%, var(--bg-color) 100%);
-            border-bottom: 2px solid var(--border-color);
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            color: var(--neon-purple);
-            font-size: 2.8rem;
-            margin: 0 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 15px rgba(157, 78, 221, 0.4);
-        }
-
-        header p {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            background-color: var(--accent-purple);
-            color: #ffffff;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 15px;
-            border: 1px solid var(--bright-purple);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .badge:hover {
-            background-color: var(--bright-purple);
-            box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
-            color: #ffffff;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-        }
-
-        h2 {
-            color: var(--neon-purple);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-
-        ul, ol {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background-color: var(--accent-purple);
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        tr:nth-child(even) {
-            background-color: rgba(255, 255, 255, 0.02);
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--bright-purple);
-            color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            transition: background-color 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: var(--neon-purple);
-        }
-
-        .btn-ml {
-            background-color: #2d1b4e;
-            border: 1px solid #c5a059;
-            color: #c5a059;
-        }
-
-        .btn-shopee {
-            background-color: #3b092b;
-            border: 1px solid #ff4500;
-            color: #ff7f50;
-        }
-
-        .mockup-form {
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 6px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--text-color);
-        }
-
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 10px;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Ateliê Gótico | Moda Autoral & Aulas de Costura</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- ==========================================================================
+       HEADER & NAVEGAÇÃO
+       ========================================================================== -->
     <header>
-        <a href="Projeto Website Atelie Gotico - Apresentacao de Modelagem.pdf" class="badge" download>Download Proposta de Projeto Web 📥</a>
-        <h1>Ateliê Gótico</h1>
-        <p>Apresentação de Modelagem, Arquitetura e Fluxo Funcional da Plataforma Digital</p>
+        <div class="container nav">
+            <!-- Esquerda: Logo -->
+            <div class="brand">
+                <a href="#home">
+                    <img src="assets/logo-purr-purple.svg" alt="Ateliê Gótico Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <!-- Centro: Links do Menu -->
+            <nav class="navlinks">
+                <a href="#sobre">Sobre</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#cursos">Aulas</a>
+                <a href="#rotina">Rotina</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <!-- Direita: Botão de Ação -->
+            <div class="nav-cta">
+                <a href="#cursos" class="btn primary">Matricule-se</a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-
-        <!-- VISÃO GERAL -->
-        <section>
-            <h2>1. Visão Geral do Projeto</h2>
-            <p>O novo website do <strong>Ateliê Gótico</strong> foi planejado para ser a vitrine digital oficial da marca, unindo o ecossistema de vendas online em marketplaces, a divulgação dos cursos presenciais/online com matrícula simplificada, e a apresentação da rotina criativa do ateliê.</p>
-            <ul>
-                <li><strong>Estética Visual:</strong> Identidade gótica consolidada (tons de roxo escuro, preto, detalhes refinados e atmosfera artesanal).</li>
-                <li><strong>Hospedagem & Infraestrutura:</strong> GitHub Pages (custo zero de servidor, alta performance e certificado SSL incluso) com Domínio Personalizado Pago.</li>
-                <li><strong>Modelo de Negócio:</strong> Vitrine interativa com redirecionamento para anúncios oficiais (Mercado Livre e Shopee) e captação de alunas via formulário gratuito.</li>
-            </ul>
-        </section>
-
-        <!-- ARQUITETURA DE PÁGINAS -->
-        <section>
-            <h2>2. Estrutura de Páginas do Site</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Seção</th>
-                        <th>Objetivo Principal</th>
-                        <th>Recursos Principais</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Home</strong></td>
-                        <td>Impacto visual e navegação rápida</td>
-                        <td>Banner gótico, resumo institucional, atalhos para loja e aulas.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Catálogo</strong></td>
-                        <td>Vitrine de peças e vestidos artesanais</td>
-                        <td>Galeria em alta resolução e botões de checkout externo.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Aulas de Costura</strong></td>
-                        <td>Captação e matrícula de alunas</td>
-                        <td>Grade curricular, horários e formulário de inscrição direta.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Ateliê / Rotina</strong></td>
-                        <td>Engajamento e bastidores</td>
-                        <td>Feed visual das criações diárias e bastidores de confecção.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Contato</strong></td>
-                        <td>Atendimento ao cliente</td>
-                        <td>Link direto para WhatsApp e redes sociais oficiais.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- FLUXO DE VENDAS E MATRÍCULA -->
-        <div class="grid-2">
-            <section>
-                <h2>3. Fluxo de Vendas</h2>
-                <p>O site funcionará como um <em>Hub de Redirecionamento</em> seguro para garantir facilidade logística:</p>
-                <div style="margin-top: 20px; text-align: center;">
-                    <p><em>Exemplo de botões na página do produto:</em></p>
-                    <a href="#" class="btn btn-ml" style="display: block; margin-bottom: 10px;">Comprar no Mercado Livre</a>
-                    <a href="#" class="btn btn-shopee" style="display: block; margin-bottom: 10px;">Comprar na Shopee</a>
-                    <a href="#" class="btn" style="display: block; background-color: #25d366; color: #fff;">Encomendar via WhatsApp</a>
+    <!-- ==========================================================================
+       HERO SECTION (BANNER CENTRALIZADO)
+       ========================================================================== -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="eyebrow">Moda Autoral & Alta Costura</span>
+                <h1 class="display"><span>Elegância</span> <span>Sombria</span> &amp; <span>Exclusividade</span></h1>
+                <p class="hero-lede">
+                    Peças exclusivas feitas sob medida, acervo alternativo e cursos práticos de costura artesanal para transformar suas ideias em arte.
+                </p>
+                <div class="hero-actions">
+                    <a href="#catalogo" class="btn primary">Ver Catálogo</a>
+                    <a href="#cursos" class="btn">Aulas de Costura</a>
                 </div>
-            </section>
-
-            <section>
-                <h2>4. Matrícula Online Gratuita</h2>
-                <p>Integração de formulário estático via <strong>FormSubmit / Formspree</strong> (sem custo de backend):</p>
-                <div class="mockup-form">
-                    <div class="form-group">
-                        <label>Nome da Aluna:</label>
-                        <input type="text" placeholder="Ex: Morgana Le Fay" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label>Turno de Interesse:</label>
-                        <select disabled>
-                            <option>Sábado - Manhã</option>
-                        </select>
-                    </div>
-                    <button class="btn" style="width: 100%;" disabled>Enviar Matrícula (Direto para o E-mail)</button>
-                </div>
-            </section>
+            </div>
         </div>
 
-        <!-- ESPECIFICAÇÕES TÉCNICAS -->
-        <section>
-            <h2>5. Especificações Técnicas</h2>
-            <ul>
-                <li><strong>Servidor:</strong> GitHub Pages (Arquivos estáticos HTML5/CSS3/JavaScript).</li>
-                <li><strong>Domínio:</strong> Personalizado (.com.br ou .com).</li>
-                <li><strong>Formulários:</strong> Integração via WebHooks/E-mail gratuitos sem necessidade de banco de dados.</li>
-                <li><strong>Responsividade:</strong> Design otimizado para celulares, tablets e computadores.</li>
-            </ul>
-        </section>
+        <div class="container">
+            <div class="hero-meta">
+                <div><strong>100% Autoral</strong><span>Design Exclusivo</span></div>
+                <div><strong>Sob Medida</strong><span>Ajuste Perfeito</span></div>
+                <div><strong>Turmas Reduzidas</strong><span>Aulas Práticas</span></div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ==========================================================================
+       BARRA DE LANÇAMENTO E CONTAGEM REGRESSIVA (31 DE OUTUBRO)
+       ========================================================================== -->
+    <div class="launch-bar">
+        <div class="container launch-inner">
+            <div class="launch-title">
+                <strong>O portal de elegância vai se abrir em:</strong>
+            </div>
+            <div class="countdown">
+                <div class="time"><b id="days">00</b><small>Dias</small></div>
+                <div class="time"><b id="hours">00</b><small>Horas</small></div>
+                <div class="time"><b id="mins">00</b><small>Min</small></div>
+                <div class="time"><b id="secs">00</b><small>Seg</small></div>
+            </div>
+        </div>
     </div>
 
+    <!-- ==========================================================================
+       SEÇÃO: SOBRE O ATELIÊ
+       ========================================================================== -->
+    <section id="sobre" class="container section">
+        <div class="section-head">
+            <span class="eyebrow">A Essência</span>
+            <h2>Arte, Costura & Subcultura</h2>
+            <p class="quote">"Transformando tecidos em expressão de identidade e alta costura alternativa."</p>
+        </div>
+        <p>
+            O Ateliê Gótico nasceu da paixão pela alfaiataria autoral e pelo universo alternativo. Cada peça é desenhada, cortada e costurada com atenção minuciosa aos detalhes, unindo estruturas clássicas ao design gótico contemporâneo.
+        </p>
+        <div class="pillars">
+            <div class="pillar">
+                <b>Atendimento Personalizado</b>
+                <span>Projetos sob medida ajustados ao seu corpo e estilo.</span>
+            </div>
+            <div class="pillar">
+                <b>Materiais Selecionados</b>
+                <span>Tecidos de alta durabilidade, aviamentos nobres e acabamento impecável.</span>
+            </div>
+            <div class="pillar">
+                <b>Ensino Prático</b>
+                <span>Cursos presenciais para transmitir as técnicas de corte e costura gótica.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SEÇÃO: CATÁLOGO DE PRODUTOS
+       ========================================================================== -->
+    <section id="catalogo" class="container section">
+        <div class="section-head">
+            <span class="eyebrow">Coleções & Peças</span>
+            <h2>Catálogo em Destaque</h2>
+            <p class="subtext">Escolha sua peça e compre com segurança nos nossos canais oficiais.</p>
+        </div>
+
+        <div class="cards">
+            <!-- Card Produto 1 -->
+            <div class="card">
+                <div class="art-card"></div>
+                <span class="card-number">VESTUÁRIO</span>
+                <h3>Corset Vitoriano em Jacquard</h3>
+                <p class="card-desc">
+                    Estrutura com barbatanas de aço, amarração ajustável e tecido encorpado.
+                </p>
+                <div class="btn-stack">
+                    <a href="https://mercadolivre.com.br" target="_blank" class="btn primary sm">Comprar no Mercado Livre</a>
+                    <a href="https://shopee.com.br" target="_blank" class="btn sm">Comprar na Shopee</a>
+                    <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20encomendar%20o%20Corset%20Vitoriano%20sob%20medida." target="_blank" class="btn sm btn-gold">Encomendar Sob Medida</a>
+                </div>
+            </div>
+
+            <!-- Card Produto 2 -->
+            <div class="card">
+                <div class="art-card"></div>
+                <span class="card-number">ACESSÓRIOS</span>
+                <h3>Gargantilha Choker de Veludo</h3>
+                <p class="card-desc">
+                    Veludo macio com pingente de cruz gótica e fecho regulável em liga metálica.
+                </p>
+                <div class="btn-stack">
+                    <a href="https://mercadolivre.com.br" target="_blank" class="btn primary sm">Comprar no Mercado Livre</a>
+                    <a href="https://shopee.com.br" target="_blank" class="btn sm">Comprar na Shopee</a>
+                </div>
+            </div>
+
+            <!-- Card Produto 3 -->
+            <div class="card">
+                <div class="art-card"></div>
+                <span class="card-number">SOB MEDIDA</span>
+                <h3>Saia Over-skirt em Tule Esvoaçante</h3>
+                <p class="card-desc">
+                    Caimento dramático com camadas de tule preto e cós reforçado em sarja.
+                </p>
+                <div class="btn-stack">
+                    <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20orçamento%20para%20Saia%20Over-skirt." target="_blank" class="btn primary sm">Solicitar Orçamento no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SEÇÃO: AULAS DE COSTURA & FORMULÁRIO
+       ========================================================================== -->
+    <section id="cursos" class="container section">
+        <div class="section-head">
+            <span class="eyebrow">Aprenda a Costurar</span>
+            <h2>Aulas de Costura & Workshops</h2>
+            <p class="subtext">Aprenda desde o manuseio da máquina até a confecção de peças alternativas completas.</p>
+        </div>
+
+        <div class="split">
+            <div>
+                <h3>Como Funcionam as Aulas?</h3>
+                <p class="paragraph-space">As turmas são reduzidas para garantir acompanhamento individual. Disponibilizamos máquinas e ferramentas no local.</p>
+                
+                <div class="pillar pillar-margin">
+                    <b>Iniciante ao Avançado</b>
+                    <span>Não é necessário ter experiência prévia com costura.</span>
+                </div>
+                <div class="pillar pillar-margin">
+                    <b>Modelagem & Confecção</b>
+                    <span>Aprenda a tirar medidas, cortar moldes e finalizar peças com acabamento fino.</span>
+                </div>
+                <div class="pillar">
+                    <b>Turnos Disponíveis</b>
+                    <span>Turmas aos sábados ou horários flexíveis durante a semana.</span>
+                </div>
+            </div>
+
+            <div class="frame">
+                <h3 class="form-title">Formulário de Pré-Matrícula</h3>
+                <form action="https://formsubmit.co/seu-email@ateliegotico.com.br" method="POST" class="form-grid">
+                    <input type="hidden" name="_subject" value="Nova Pré-Matrícula pelo Site!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div>
+                        <label>Nome Completo:</label>
+                        <input type="text" name="nome" required>
+                    </div>
+
+                    <div>
+                        <label>WhatsApp / Telefone:</label>
+                        <input type="tel" name="whatsapp" required>
+                    </div>
+
+                    <div>
+                        <label>Turno Desejado:</label>
+                        <select name="turno">
+                            <option value="Manhã">Manhã</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noite">Noite</option>
+                            <option value="Sábado">Sábado</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Nível de Experiência:</label>
+                        <select name="nivel">
+                            <option value="Nunca costurei">Nunca costurei (Iniciante do zero)</option>
+                            <option value="Básico">Já sei usar a máquina (Básico)</option>
+                            <option value="Intermediário">Já faço peças simples (Intermediário)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn primary btn-full">Enviar Matrícula</button>
+                    
+                    <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20fazer%20minha%20matrícula%20diretamente%20pelo%20WhatsApp." target="_blank" class="btn btn-wa">
+                        Matricular via WhatsApp Direct
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SEÇÃO: DIA A DIA NO ATELIÊ
+       ========================================================================== -->
+    <section id="rotina" class="container section">
+        <div class="section-head">
+            <span class="eyebrow">Bastidores</span>
+            <h2>Dia a Dia no Ateliê</h2>
+            <p class="subtext">Acompanhe nossa rotina de criação, testes de tecidos e processos de confecção artesanal.</p>
+        </div>
+
+        <div class="atelier-grid">
+            <div class="frame">
+                <div class="art-card"></div>
+                <h4>Corte & Modelagem</h4>
+                <p class="subtext">Desenvolvimento de moldes anatômicos e alinhamento de estruturas para corsets.</p>
+            </div>
+            <div class="frame">
+                <div class="art-card"></div>
+                <h4>Seleção de Aviamentos</h4>
+                <p class="subtext">Escolha de rendas, fitas e ilhós de alta resistência para acabamento impecável.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SEÇÃO: CONTATO
+       ========================================================================== -->
+    <section id="contato" class="container section">
+        <div class="section-head">
+            <span class="eyebrow">Atendimento</span>
+            <h2>Entre em Contato</h2>
+            <p class="subtext">Dúvidas sobre encomendas, produtos ou aulas? Fale conosco.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Canais Diretos</h3>
+                <p class="info-line"><strong>WhatsApp:</strong> (00) 00000-0000</p>
+                <p class="info-line"><strong>E-mail:</strong> contato@ateliegotico.com.br</p>
+                <p class="info-line"><strong>Instagram:</strong> @ateliegotico</p>
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn primary btn-full">Iniciar Conversa no WhatsApp</a>
+            </div>
+
+            <div class="contact-card">
+                <h3>Horário de Atendimento</h3>
+                <p class="info-line"><strong>Segunda a Sexta:</strong> 09h às 18h</p>
+                <p class="info-line"><strong>Sábados:</strong> 09h às 13h (Horário de turmas)</p>
+                <span class="eyebrow eyebrow-gold">Atendimento Presencial com Agendamento</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       RODAPÉ
+       ========================================================================== -->
     <footer>
-        <p>Apresentação de Modelagem do Projeto — Website Ateliê Gótico</p>
+        <div class="container">
+            <div>
+                <strong>Ateliê Gótico</strong> — Alta Costura Autoral & Aulas
+            </div>
+            <div>
+                Hosted on GitHub Pages • Domínio Oficial
+            </div>
+        </div>
     </footer>
 
+    <!-- JS EXTERNO -->
+    <script src="script.js"></script>
 </body>
 </html>

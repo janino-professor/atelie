@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 170" role="img" aria-labelledby="title desc">
+  <title id="title">Purr Purple</title>
+  <desc id="desc">Símbolo de lua crescente costurada com fio, agulha e gato, seguido do nome Purr Purple.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B7B3BE"/>
+      <stop offset=".5" stop-color="#8B79A8"/>
+      <stop offset="1" stop-color="#4A305D"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 10)" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round">
+    <path d="M92 20C49 25 21 59 24 94c3 37 35 62 70 55 19-4 35-15 46-29-12 5-25 7-38 5-32-5-51-34-46-65 4-18 16-34 36-40z"/>
+    <path d="M37 126C78 145 115 137 139 117" stroke-dasharray="7 8"/>
+    <path d="M138 117l48-86"/>
+    <path d="M184 31l7-13"/>
+    <path d="M185 31l10 4"/>
+  </g>
+  <g transform="translate(135 92)" fill="none" stroke="#B7B3BE" stroke-width="3">
+    <path d="M0 34c9-25 30-29 42-14 12-15 33-11 42 14-16-7-28-6-42 4C28 28 16 27 0 34z"/>
+    <path d="M18 20l-4-16 12 8 16-8-4 16"/>
+  </g>
+  <text x="215" y="84" fill="#EAE7EE" font-family="Georgia,serif" font-size="43" letter-spacing="2">PURR</text>
+  <text x="215" y="125" fill="#8B79A8" font-family="Georgia,serif" font-size="39" letter-spacing="3">PURPLE</text>
+  <path d="M216 139h275" stroke="#4A305D" stroke-width="2"/>
+</svg>
