@@ -64,7 +64,7 @@
       <div class="hero-bottom-fade"></div>
     </section>
 
-    <!-- Seção Central de Interesse -->
+    <!-- Seção Central de Interesse com Formulário Integrado -->
     <section class="interest section-frame">
       <div class="ornament-top">
         <span class="ornament-line"></span>
@@ -93,12 +93,45 @@
 
         <p class="no-obligation">Sem pagamento e sem compromisso.</p>
 
-        <!-- Botão com Moldura Recortada -->
-        <a class="button button-primary" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">
-          <span class="btn-star">✦</span>
-          <span class="btn-text">QUERO FAZER PARTE DA PRIMEIRA TURMA</span>
-          <span class="btn-arrow">→</span>
-        </a>
+        <!-- Formulário Nativo Integrado (Substituindo o Botão do Google Forms) -->
+        <form class="enrollment-form" action="https://formspree.io/f/xzezjkpz" method="POST">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp / Telefone</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(00) 00000-0000">
+          </div>
+
+          <div class="form-group">
+            <label for="cpf">CPF (para elaboração do contrato)</label>
+            <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+          </div>
+
+          <div class="form-group">
+            <label for="horarios">Dias e Horários de Preferência</label>
+            <select id="horarios" name="horarios" required>
+              <option value="" disabled selected>Selecione a melhor opção...</option>
+              <option value="terca-quinta-manha">Terça e Quinta — Manhã (09h às 12h)</option>
+              <option value="terca-quinta-tarde">Terça e Quinta — Tarde (14h às 17h)</option>
+              <option value="sabado-manha">Sábado — Manhã (09h às 12h)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="button button-primary button-submit">
+            <span class="btn-star">✦</span>
+            <span class="btn-text">QUERO FAZER PARTE DA PRIMEIRA TURMA</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+
       </div>
     </section>
 

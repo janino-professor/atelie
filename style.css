@@ -46,8 +46,8 @@ body {
 }
 
 .brand-mark img {
-  width: 70px;
-  height: 70px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
 }
 
@@ -78,34 +78,28 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding-top: 60px;
-  padding-left: clamp(calc(20px + 10vw), 16vw, calc(100px + 10vw)); /* Posicionado 10% mais para a direita */
+  padding-left: clamp(calc(20px + 10vw), 16vw, calc(100px + 10vw));
   background-image: url('assets/fundo.png');
   background-position: right top;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-/* ==========================================================================
-   MURAL FOSCO DE INAUGURAÇÃO DA HERO (RELAÇÃO AO CRONÔMETRO E TEXTOS)
-   ========================================================================== */
+/* Mural Fosco de Inauguração da Hero */
 .hero-overlay {
   width: 100%;
-  
-  /* ---> CONTROLE DE TAMANHO E ESPAÇAMENTO DO BLOCO FOSCO (REDUZIDO EM 10%) <--- */
-  max-width: 432px;      /* Reduzido 10% (de 480px para 432px) */
-  padding: 14px 25px;    /* Reduzido 10% mantendo a proporção retangular */
-  margin-top: 10px;      /* Afastamento do topo */
-
-  /* ---> CARACTERÍSTICAS VISUAIS E EFEITO FOSCO (GLASSMORPHISM) <--- */
+  max-width: 432px;
+  padding: 14px 25px;
+  margin-top: 10px;
   text-align: center;
   position: relative;
   z-index: 2;
-  background: rgba(12, 6, 18, 0.20); /* Transparência do fundo do bloco */
-  backdrop-filter: blur(10px);        /* Intensidade do desfoque/efeito fosco */
+  background: rgba(12, 6, 18, 0.20);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--border-frame); /* Borda fina estilizada */
-  border-radius: 16px;                   /* Arredondamento dos cantos */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6); /* Sombra do bloco */
+  border: 1px solid var(--border-frame);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
 }
 
 .eyebrow { 
@@ -136,16 +130,16 @@ body {
   margin-bottom: 12px;
 }
 
-/* ---> CRONÔMETRO AJUSTADO PROPORCIONALMENTE EM 10% <--- */
+/* Cronômetro */
 .countdown {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border: 1px solid var(--line);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
-  padding: 9px 4px;     /* Espaçamento interno reduzido 10% */
-  margin: 12px auto;    /* Margem ajustada */
-  max-width: 324px;     /* Reduzido de 360px para 324px (10%) */
+  padding: 9px 4px;
+  margin: 12px auto;
+  max-width: 324px;
 }
 
 .countdown div { border-right: 1px solid var(--line); text-align: center; }
@@ -160,7 +154,7 @@ body {
   margin: 0;
 }
 
-/* Transição de Fundo em Gradiente Suave para o Roxo Abissal */
+/* Transição de Fundo em Gradiente */
 .hero-bottom-fade {
   position: absolute;
   bottom: 0;
@@ -259,6 +253,60 @@ body {
 }
 .btn-star { font-size: 9px; color: var(--lavender); }
 .btn-arrow { font-size: 14px; }
+
+/* Formulário de Cadastro Purr Purple */
+.enrollment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 500px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--lavender-light);
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+  background: rgba(9, 4, 13, 0.6);
+  border: 1px solid var(--border-frame);
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--purple-glow);
+  box-shadow: 0 0 10px rgba(155, 81, 224, 0.3);
+}
+
+.form-group option {
+  background-color: var(--abyss);
+  color: var(--white);
+}
+
+.button-submit {
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
 
 .section-divider-star {
   text-align: center;
