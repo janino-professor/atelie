@@ -1,51 +1,49 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // -----------------------------------------------------------------------------
-    // CONTAGEM REGRESSIVA PARA 31 DE OUTUBRO
-    // -----------------------------------------------------------------------------
-    function updateCountdown() {
-        const currentYear = new Date().getFullYear();
-        let targetDate = new Date(`October 31, ${currentYear} 00:00:00`).getTime();
-        const now = new Date().getTime();
-        let difference = targetDate - now;
+// Data da Abertura do Portal
+const LAUNCH_DATE = "2026-10-31T19:00:00-03:00";
 
-        // Se o dia 31 de Outubro do ano atual já passou, ajusta para o próximo ano
-        if (difference < 0) {
-            targetDate = new Date(`October 31, ${currentYear + 1} 00:00:00`).getTime();
-            difference = targetDate - now;
-        }
+const pad = (n) => String(Math.max(0, n)).padStart(2, "0");
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+function updateCountdown() {
+  const target = new Date(LAUNCH_DATE).getTime();
+  const now = Date.now();
+  let distance = target - now;
 
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minsEl = document.getElementById("mins");
-        const secsEl = document.getElementById("secs");
+  if (distance < 0) distance = 0;
 
-        if (daysEl) daysEl.innerText = days < 10 ? "0" + days : days;
-        if (hoursEl) hoursEl.innerText = hours < 10 ? "0" + hours : hours;
-        if (minsEl) minsEl.innerText = minutes < 10 ? "0" + minutes : minutes;
-        if (secsEl) secsEl.innerText = seconds < 10 ? "0" + seconds : seconds;
-    }
+  const totalSeconds = Math.floor(distance / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
 
-    // Executa imediatamente e atualiza a cada 1 segundo
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+  const daysEl = document.querySelector("#days");
+  const hoursEl = document.querySelector("#hours");
+  const minutesEl = document.querySelector("#minutes");
+  const secondsEl = document.querySelector("#seconds");
 
-    // -----------------------------------------------------------------------------
-    // ROLAGEM SUAVE PARA OS LINKS DO MENU
-    // -----------------------------------------------------------------------------
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+  if (daysEl) daysEl.textContent = pad(days);
+  if (hoursEl) hoursEl.textContent = pad(hours);
+  if (minutesEl) minutesEl.textContent = pad(minutes);
+  if (secondsEl) secondsEl.textContent = pad(seconds);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Menu Hambúrguer (Mobile)
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("#main-nav");
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
     });
-});
+  });
+}
