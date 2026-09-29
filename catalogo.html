@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Purr Purple — Catálogo de Peças Autorais.">
+  <meta name="theme-color" content="#09040d">
+  <title>Catálogo — Purr Purple Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .catalog-card {
+      background: rgba(9, 4, 13, 0.7);
+      border: 1px solid var(--border-frame);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+    }
+    .catalog-card-header {
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      color: var(--lavender);
+      margin-bottom: 8px;
+    }
+    .catalog-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .catalog-card p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 16px;
+      color: var(--silver);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Purr Purple — início">
+      <span class="brand-mark">
+        <img src="assets/logo-purr-purple.png" alt="Logo Purr Purple">
+      </span>
+      <div class="brand-text">
+        <span class="brand-name">PURR PURPLE</span>
+        <span class="brand-sub">ATELIER DE MODA AUTORAL</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+      <a href="sobre.html">SOBRE</a>
+      <a href="catalogo.html">CATÁLOGO</a>
+      <a href="aulas.html">AULAS</a>
+      <a href="rotinas.html">ROTINA</a>
+      <a href="consultoria.html">CONSULTORIAS</a>
+      <a href="contatos.html">CONTATO</a>
+    </nav>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <section class="section-frame">
+      <div class="ornament-top">
+        <span class="ornament-line"></span>
+        <span class="ornament-star">✦</span>
+        <span class="ornament-line"></span>
+      </div>
+
+      <div style="text-align: center;">
+        <p class="eyebrow">✦ &nbsp; COLEÇÕES & PEÇAS &nbsp; ✦</p>
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 38px; letter-spacing: 0.1em; color: var(--white);">
+          CATÁLOGO AUTORAL
+        </h1>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--silver); margin-top: 8px;">
+          Peças exclusivas disponíveis para compra imediata ou encomenda sob medida.
+        </p>
+      </div>
+
+      <div class="catalog-grid">
+        <article class="catalog-card">
+          <div>
+            <span class="catalog-card-header">VESTUÁRIO AUTORAL</span>
+            <h3>Corset Vitoriano Jacquard</h3>
+            <p>Estrutura rígida com barbatanas de aço, painel traseiro protetor e amarração ajustável em fita de cetim.</p>
+          </div>
+          <a href="contatos.html" class="button button-primary" style="width: 100%; padding: 12px;">
+            <span class="btn-text">ENCOMENDAR</span>
+          </a>
+        </article>
+
+        <article class="catalog-card">
+          <div>
+            <span class="catalog-card-header">ACESSÓRIOS</span>
+            <h3>Choker Veludo & Cruz Gótica</h3>
+            <p>Veludo macio ao toque com pingente em liga metálica envelhecida e fecho com corrente de regulagem.</p>
+          </div>
+          <a href="contatos.html" class="button button-primary" style="width: 100%; padding: 12px;">
+            <span class="btn-text">ENCOMENDAR</span>
+          </a>
+        </article>
+
+        <article class="catalog-card">
+          <div>
+            <span class="catalog-card-header">SOB MEDIDA</span>
+            <h3>Saia Over-skirt Tule Dramático</h3>
+          <p>Camadas volumosas de tule preto sobreposto com cós reforçado em sarja peletizada.</p>
+          </div>
+          <a href="contatos.html" class="button button-primary" style="width: 100%; padding: 12px;">
+            <span class="btn-text">SOLICITAR ORÇAMENTO</span>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>☾ &nbsp; PURR PURPLE &nbsp;✦&nbsp; MAIS QUE MODA, UM UNIVERSO. &nbsp; ☽</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

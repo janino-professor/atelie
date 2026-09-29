@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Purr Purple — Consultoria de Imagem e Estilo.">
+  <meta name="theme-color" content="#09040d">
+  <title>Consultoria — Purr Purple Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Purr Purple — início">
+      <span class="brand-mark">
+        <img src="assets/logo-purr-purple.png" alt="Logo Purr Purple">
+      </span>
+      <div class="brand-text">
+        <span class="brand-name">PURR PURPLE</span>
+        <span class="brand-sub">ATELIER DE MODA AUTORAL</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+      <a href="sobre.html">SOBRE</a>
+      <a href="catalogo.html">CATÁLOGO</a>
+      <a href="aulas.html">AULAS</a>
+      <a href="rotinas.html">ROTINA</a>
+      <a href="consultoria.html">CONSULTORIAS</a>
+      <a href="contatos.html">CONTATO</a>
+    </nav>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <section class="interest section-frame">
+      <div class="ornament-top">
+        <span class="ornament-line"></span>
+        <span class="ornament-star">✦</span>
+        <span class="ornament-line"></span>
+      </div>
+
+      <div class="interest-inner">
+        <p class="eyebrow">✦ &nbsp; VISTA SUA SINGULARIDADE &nbsp; ✦</p>
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 38px; letter-spacing: 0.1em; margin-bottom: 15px; color: var(--white);">
+          CONSULTORIA DE IMAGEM & ESTILO
+        </h1>
+
+        <div class="interest-text">
+          <p><strong>Encontre e potencialize sua própria expressão estética.</strong></p>
+          <p>
+            A consultoria de estilo do Purr Purple é direcionada para quem deseja alinhar sua identidade visual às suas preferências estéticas, seja para eventos especiais, figurinos ou para estruturar um guarda-roupa alternativo coerente e marcante.
+          </p>
+        </div>
+
+        <form class="enrollment-form" action="https://formspree.io/f/xzezjkpz" method="POST">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp / Telefone</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(00) 00000-0000">
+          </div>
+
+          <div class="form-group">
+            <label for="objetivo">Objetivo do Atendimento</label>
+            <select id="objetivo" name="objetivo" required>
+              <option value="" disabled selected>Selecione uma opção...</option>
+              <option value="figurino-evento">Design de Figurino / Evento Especial</option>
+              <option value="consultoria-estilo">Consultoria de Estilo & Guarda-Roupa</option>
+              <option value="peca-sob-medida">Criação de Peça Exclusiva Sob Medida</option>
+            </select>
+          </div>
+
+          <button type="submit" class="button button-primary button-submit">
+            <span class="btn-star">✦</span>
+            <span class="btn-text">SOLICITAR AGENDAMENTO</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>☾ &nbsp; PURR PURPLE &nbsp;✦&nbsp; MAIS QUE MODA, UM UNIVERSO. &nbsp; ☽</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

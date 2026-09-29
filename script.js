@@ -47,3 +47,28 @@ if (menuToggle && nav) {
     });
   });
 }
+
+// Envio do Formulário para o WhatsApp
+document.addEventListener("DOMContentLoaded", function () {
+  const formWhatsapp = document.getElementById("form-whatsapp");
+
+  if (formWhatsapp) {
+    formWhatsapp.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // INSIRA AQUI O SEU NÚMERO DE WHATSAPP (Com código do país 55 + DDD + Número)
+      const numeroWhatsApp = "5561985398914";
+
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      // Texto que será enviado pré-formatado
+      const texto = `Olá! Vim pelo formulário do site.\n\n*Nome:* ${nome}\n*E-mail:* ${email}\n*Mensagem:* ${mensagem}`;
+
+      // Abre a conversa do WhatsApp em uma nova aba
+      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    });
+  }
+});
