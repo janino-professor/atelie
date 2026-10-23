@@ -114,12 +114,34 @@
           </div>
 
           <div class="form-group">
-            <label for="horarios">Dias e Horários de Preferência</label>
+            <label for="horarios">Turno / Horário Desejado (1 aula por semana)</label>
             <select id="horarios" name="horarios" required>
-              <option value="" disabled selected>Selecione a melhor opção...</option>
-              <option value="terca-quinta-manha">Terça e Quinta — Manhã (09h às 12h)</option>
-              <option value="terca-quinta-tarde">Terça e Quinta — Tarde (14h às 17h)</option>
-              <option value="sabado-manha">Sábado — Manhã (09h às 12h)</option>
+              <option value="" disabled selected>Selecione a sua preferência...</option>
+              
+              <optgroup label="Segunda-feira">
+                <option value="segunda-manha" data-day="Segunda-feira" data-turno="Manhã">Manhã</option>
+                <option value="segunda-tarde" data-day="Segunda-feira" data-turno="Tarde">Tarde</option>
+              </optgroup>
+
+              <optgroup label="Terça-feira">
+                <option value="terca-manha" data-day="Terça-feira" data-turno="Manhã">Manhã</option>
+                <option value="terca-tarde" data-day="Terça-feira" data-turno="Tarde">Tarde</option>
+              </optgroup>
+
+              <optgroup label="Quarta-feira">
+                <option value="quarta-manha" data-day="Quarta-feira" data-turno="Manhã">Manhã</option>
+                <option value="quarta-tarde" data-day="Quarta-feira" data-turno="Tarde">Tarde</option>
+              </optgroup>
+
+              <optgroup label="Quinta-feira">
+                <option value="quinta-manha" data-day="Quinta-feira" data-turno="Manhã">Manhã</option>
+                <option value="quinta-tarde" data-day="Quinta-feira" data-turno="Tarde">Tarde</option>
+              </optgroup>
+
+              <optgroup label="Sábado">
+                <option value="sabado-manha" data-day="Sábado" data-turno="Manhã">Manhã</option>
+                <option value="sabado-tarde" data-day="Sábado" data-turno="Tarde">Tarde</option>
+              </optgroup>
             </select>
           </div>
 
@@ -205,5 +227,29 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Script para ajustar o texto exibido na caixa quando selecionado
+    const selectHorarios = document.getElementById('horarios');
+    if (selectHorarios) {
+      selectHorarios.addEventListener('mousedown', function() {
+        // Restaura o texto curto na lista ao abrir/clicar
+        Array.from(this.options).forEach(opt => {
+          if (opt.hasAttribute('data-turno')) {
+            opt.text = opt.getAttribute('data-turno');
+          }
+        });
+      });
+
+      selectHorarios.addEventListener('change', function() {
+        // Atualiza a caixa fechada para mostrar o dia junto com o turno
+        const selectedOpt = this.options[this.selectedIndex];
+        const day = selectedOpt.getAttribute('data-day');
+        const turno = selectedOpt.getAttribute('data-turno');
+        if (day && turno) {
+          selectedOpt.text = `${day} — ${turno}`;
+        }
+      });
+    }
+  </script>
 </body>
 </html>
