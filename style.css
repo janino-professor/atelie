@@ -68,24 +68,23 @@ body {
 
 .menu-toggle { display: none; background: none; border: 1px solid var(--line); color: var(--white); padding: 8px 12px; }
 
-/* Seção Hero - Imagem Exibida Inteira e Encostada na Borda Direita */
+/* Seção Hero - Com a Caixa Posicionada à Esquerda */
 .hero-parallax {
   position: relative;
   width: 100%;
-  aspect-ratio: 1000 / 1480;
-  max-height: 92vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-top: 60px;
-  padding-left: clamp(calc(20px + 10vw), 16vw, calc(100px + 10vw));
+  padding-left: clamp(20px, 8vw, 100px);
   background-image: url('assets/fundo.png');
-  background-position: right top;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
-/* Mural Fosco de Inauguração da Hero */
+/* Mural Fosco de Inauguração da Hero (Posicionado à Esquerda) */
 .hero-overlay {
   width: 100%;
   max-width: 432px;
@@ -94,7 +93,7 @@ body {
   text-align: center;
   position: relative;
   z-index: 2;
-  background: rgba(12, 6, 18, 0.20);
+  background: rgba(12, 6, 18, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border-frame);
@@ -129,23 +128,6 @@ body {
   color: var(--lavender);
   margin-bottom: 12px;
 }
-
-/* Cronômetro */
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 9px 4px;
-  margin: 12px auto;
-  max-width: 324px;
-}
-
-.countdown div { border-right: 1px solid var(--line); text-align: center; }
-.countdown div:last-child { border: none; }
-.countdown strong { display: block; font: 400 22px/1 "Cormorant Garamond", serif; color: var(--white); }
-.countdown span { font: 400 6.5px "Montserrat", sans-serif; letter-spacing: 0.2em; color: var(--silver); }
 
 .hero-services { 
   font: 400 8.5px/1.8 "Montserrat", sans-serif; 
@@ -224,12 +206,6 @@ body {
 .interest-text p { margin-bottom: 22px; }
 
 .ornament-mid { font-size: 10px; color: var(--lavender); margin: 20px 0 15px; }
-
-.no-obligation { 
-  font: italic 16px "Cormorant Garamond", serif; 
-  color: #bfaecb; 
-  margin-bottom: 28px; 
-}
 
 .button-primary {
   display: inline-flex;
@@ -367,12 +343,6 @@ footer {
 /* Adaptabilidade Mobile */
 @media(max-width: 950px) {
   .script-quote { display: none; }
-  .hero-parallax {
-    aspect-ratio: auto;
-    min-height: 80vh;
-    background-size: cover;
-    background-position: center top;
-  }
 }
 
 @media(max-width: 800px) {
