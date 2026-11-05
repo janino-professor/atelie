@@ -38,25 +38,16 @@
   </header>
 
   <main>
-    <!-- Seção Hero com Imagem Inteira Alinhada à Direita -->
+    <!-- Seção Hero com a Caixa Posicionada à Esquerda -->
     <section class="hero-parallax">
       <div class="hero-overlay">
         <p class="eyebrow">✦ &nbsp; O PORTAL PARA O UNIVERSO &nbsp; ✦</p>
         <h1>PURR PURPLE</h1>
-        <p class="hero-lead">ESTÁ PRESTES A SE ABRIR.</p>
-        <div class="hero-star-divider">✦</div>
-
-        <!-- Cronômetro de Inauguração -->
-        <div class="countdown" aria-label="Contagem regressiva para a abertura do portal">
-          <div><strong id="days">00</strong><span>DIAS</span></div>
-          <div><strong id="hours">00</strong><span>HORAS</span></div>
-          <div><strong id="minutes">00</strong><span>MINUTOS</span></div>
-          <div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
-        </div>
-
+        <p class="hero-lead">ESTÁ ABERTO.</p>
         <p class="hero-services">
-          PEÇAS AUTORAIS &nbsp;✦&nbsp; AULAS DE COSTURA<br>
-          CONSULTORIA DE IMAGEM & ESTILO
+          Mais de 500 alunos já aprenderam comigo. Pela primeira vez, abro as portas do meu próprio atelier para uma nova turma em novembro.
+        <p class="hero-lead">AULAS DE COSTURA CONSULTORIA DE IMAGEM & ESTILO</p>
+  
         </p>
       </div>
 
@@ -80,18 +71,14 @@
           <span class="side-moon">☾</span>
         </div>
 
-        <div class="interest-text">
-          <p><strong>Mais de 500 alunos já aprenderam comigo.</strong><br>
-          <em>Agora, pela primeira vez, vou abrir as portas do meu<br>próprio atelier para receber uma nova turma.</em></p>
-          
-          <p>As aulas começam em novembro e as primeiras vagas<br>serão organizadas a partir desta lista de interesse.</p>
-          
+        <div class="interest-text">                   
+               
           <p>Cadastre-se gratuitamente e indique os dias e horários<br>que funcionam melhor para você. Quando as turmas forem<br>definidas, você será avisada em primeira mão.</p>
         </div>
 
         <div class="ornament-mid">✦</div>
         
-        <!-- Formulário Nativo Integrado (Substituindo o Botão do Google Forms) -->
+        <!-- Formulário Nativo Integrado -->
         <form class="enrollment-form" action="https://formspree.io/f/xzezjkpz" method="POST">
           <div class="form-group">
             <label for="nome">Nome Completo</label>
@@ -147,7 +134,7 @@
 
           <button type="submit" class="button button-primary button-submit">
             <span class="btn-star">✦</span>
-            <span class="btn-text">QUERO FAZER PARTE DA PRIMEIRA TURMA</span>
+            <span class="btn-text">QUERO FAZER ME INSCREVER</span>
             <span class="btn-arrow">→</span>
           </button>
         </form>
@@ -228,11 +215,9 @@
 
   <script src="script.js"></script>
   <script>
-    // Script para ajustar o texto exibido na caixa quando selecionado
     const selectHorarios = document.getElementById('horarios');
     if (selectHorarios) {
       selectHorarios.addEventListener('mousedown', function() {
-        // Restaura o texto curto na lista ao abrir/clicar
         Array.from(this.options).forEach(opt => {
           if (opt.hasAttribute('data-turno')) {
             opt.text = opt.getAttribute('data-turno');
@@ -241,7 +226,6 @@
       });
 
       selectHorarios.addEventListener('change', function() {
-        // Atualiza a caixa fechada para mostrar o dia junto com o turno
         const selectedOpt = this.options[this.selectedIndex];
         const day = selectedOpt.getAttribute('data-day');
         const turno = selectedOpt.getAttribute('data-turno');
